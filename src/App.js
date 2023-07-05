@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { /*useState, useEffect,*/ Suspense } from "react";
+import { /*useLocation,*/ Route, Routes } from "react-router-dom";
+import "boxicons";
+import * as ROUTES from "./Constants/routes";
+import GlobalStyle from "./GlobalStyles";
+import { theme } from "./Theme";
+import { ThemeProvider } from "styled-components";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Outlet from "./Pages/Outlet";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Suspense>
+          <Routes>
+            <Route path={ROUTES.HOMEPAGE} element={<Home />} />
+            <Route path={ROUTES.ABOUTPAGE} element={<About />} />
+            <Route path={ROUTES.OUTLETPAGE} element={<Outlet />} />
+          </Routes>
+        </Suspense>
+      </ThemeProvider>
+    </>
   );
-}
+};
 
 export default App;
