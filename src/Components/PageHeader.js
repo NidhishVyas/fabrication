@@ -31,6 +31,10 @@ const HeroContent = styled.p`
   font-family: ${(props) => props.theme.Fonts.Abril};
   font-size: 36px;
   font-weight: 400;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 `;
 
 

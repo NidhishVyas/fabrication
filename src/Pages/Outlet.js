@@ -4,6 +4,11 @@ import ContactUs from "../Components/ContactUs";
 import PageHeader from "../Components/PageHeader";
 import Back from "../Images/Back.png";
 import E1 from "../Images/Equip1.png";
+import E2 from "../Images/Equip2.png";
+import E3 from "../Images/Equip3.png";
+import E4 from "../Images/Equip4.png";
+import E5 from "../Images/Equip5.png";
+import E6 from "../Images/Equip6.png";
 
 const Info = styled.section`
   background-repeat: no-repeat;
@@ -72,17 +77,19 @@ const PhotoSec = styled.section`
 `;
 
 const PhotoDiv = styled.div`
-display: flex;
-justify-content: space-around;
-align-items: center;
-flex-wrap: wrap;
-gap: 20px;
-`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+`;
 
 const Photos = styled.img`
-aspect-ratio: 1/1;
-width: 200px;
-height: 200px;
+  aspect-ratio: 1/1;
+  /* object-fit: contain; */
+  width: 200px;
+  flex: 0 0 25%;
+  height: 200px;
 `;
 
 function Outlet() {
@@ -124,15 +131,11 @@ function Outlet() {
         <HeadingDiv fac>Of the many fabrication tools we possess</HeadingDiv>
         <PhotoDiv>
           <Photos src={E1} />
-          <Photos src={E1} />
-          <Photos src={E1} />
-          <Photos src={E1} />
-          <Photos src={E1} />
-          <Photos src={E1} />
-          <Photos src={E1} />
-          <Photos src={E1} />
-          <Photos src={E1} />
-          <Photos src={E1} />
+          <Photos src={E2} />
+          <Photos src={E3} />
+          <Photos src={E4} />
+          <Photos src={E5} />
+          <Photos src={E6} />
         </PhotoDiv>
       </PhotoSec>
 

@@ -269,13 +269,13 @@ const Home = () => {
       <Projects>
         <HeadingDiv>Providing Solutions Start to End</HeadingDiv>
         <PhotoGallery>
-          <Photos img={P1} no="1" name="Project Name" />
-          <Photos img={P2} no="2" name="Project Name" />
-          <Photos img={P3} no="3" name="Project Name" />
-          <Photos img={P4} no="4" name="Project Name" />
-          <Photos img={P5} no="5" name="Project Name" />
-          <Photos img={P6} no="6" name="Project Name" />
-          <Photos img={P7} no="7" name="Project Name" />
+          <Photos img={P1} no="1" name="Thane multi story parking" />
+          <Photos img={P2} no="2" name="Lifts & Escalators" />
+          <Photos img={P3} no="3" name="Steel Girder" />
+          <Photos img={P4} no="4" name="Raising of PF" />
+          <Photos img={P5} no="5" name="Kalyan - Igatpuri" />
+          <Photos img={P6} no="6" name="Chambal bridge" />
+          <Photos img={P7} no="7" name="Amalner" />
         </PhotoGallery>
       </Projects>
       <Contact />
