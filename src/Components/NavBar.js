@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import * as ROUTES from "../Constants/routes";
 
-
 const Container = styled.section`
   padding: 0;
 `;
@@ -18,7 +17,6 @@ const NavSectionMob = styled.section`
 `;
 const NavSectionDesk = styled.section`
   display: none;
- 
   justify-content: space-between;
   align-items: center;
   text-align: center;
@@ -27,11 +25,13 @@ const NavSectionDesk = styled.section`
 
   div:nth-of-type(1),
   div:nth-of-type(2),
-  div:nth-of-type(4),
-  div:nth-of-type(5) {
+  div:nth-of-type(3),
+  div:nth-of-type(5),
+  div:nth-of-type(6),
+  div:nth-of-type(7) {
     flex-basis: 18.75%;
   }
-  div:nth-of-type(3) {
+  div:nth-of-type(4) {
     flex-basis: 25%;
   }
   @media ${(props) => props.theme.MediaQueries.l.query} {
@@ -106,6 +106,13 @@ const MenuList = styled.div`
   }
 `;
 
+const SubNav = styled.div`
+  display: flex;
+  flex-direction: column ;
+  position: relative ;
+  top: 20% ;
+`
+
 const NavBar = () => {
   const [toggle, setToggle] = useState(false);
   const navigate = useNavigate();
@@ -136,16 +143,28 @@ const NavBar = () => {
           <NavItems onClick={() => navigate(ROUTES.HOMEPAGE)}>Home</NavItems>
         </div>
         <div>
-          <NavItems onClick={() => navigate(ROUTES.ABOUTPAGE)}>About Us</NavItems>
+          <NavItems onClick={() => navigate(ROUTES.ABOUTPAGE)}>
+            About Us
+          </NavItems>
+        </div>
+        <div>
+          <NavItems onClick={() => navigate(ROUTES.OUTLETPAGE)}>
+            Outlet
+          </NavItems>
         </div>
         <div>
           <Name>FABRICATED</Name>
         </div>
         <div>
-          <NavItems onClick={() => navigate(ROUTES.OUTLETPAGE)}>Outlet</NavItems>
+          <NavItems onClick={() => navigate(ROUTES.ONGOING)}>Project</NavItems>
         </div>
         <div>
           <NavItems href="#4">Contact Us</NavItems>
+        </div>
+        <div>
+          <NavItems onClick={() => navigate(ROUTES.COMPLETED)}>
+            Brochure
+          </NavItems>
         </div>
       </NavSectionDesk>
     </Container>
